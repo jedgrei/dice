@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>dice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <img class="sidebar-button top" src="imgs/tetrahedron.png" onclick="model_type = 'tetra';">
+        <img class="sidebar-button" src="imgs/hexahedron.png" onclick="model_type = 'cube';">
+        <img class="sidebar-button" src="imgs/octahedron.png" onclick="model_type = 'octa';">
+        <img class="sidebar-button" src="imgs/dodecahedron.png" onclick="model_type = 'dodeca';">
+        <img class="sidebar-button bottom" src="imgs/icosahedron.png" onclick="model_type = 'icosa';">
+    </div> 
+    <canvas id="canvas"></canvas> 
+    <script src="point.js"></script>
+    <script src="models.js"></script>
+    <script src="draw.js"></script>
+</body>
+</html>

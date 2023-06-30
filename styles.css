@@ -1,0 +1,74 @@
+:root{
+    --sidebar-width: 10%;
+    --bg-color: 
+}
+html {
+    margin:0;
+    padding:0;
+    border:0;
+    height:100%;
+    width:100%;
+}
+body {
+    margin:0;
+    padding:0;
+    border:0;
+    width:100%;
+    height:100%;
+    display:block
+}
+.sidebar {
+    margin:0;
+    padding:0;
+    border:0;
+    width:var(--sidebar-width);
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #222;
+    float:left;
+}
+.sidebar-button {
+    display:block;
+    width:70%;
+    margin-left:15%;
+}
+@keyframes hovering {
+    to {width: 80%; margin-left: 10%;}
+}
+.sidebar-button:hover {
+    /* width:80%; */
+    /* margin-left: 10%; */
+    animation-name: hovering;
+    animation-duration: 0.05s;
+    animation-fill-mode: forwards;
+}
+@keyframes unhovering {
+    from {width: 80%; margin-left: 10%;}
+    to {width: 70%; margin-left: 15%;}
+}
+.sidebar-button:not(:hover) {
+    /* width:80%; */
+    /* margin-left: 10%; */
+    animation-name: unhovering;
+    animation-duration: 0.05s;
+    animation-fill-mode: forwards;
+}
+@keyframes clicking {
+    to {width: 60%; margin-left: 20%;}
+}
+.sidebar-button:active {
+    animation-name: clicking;
+    animation-duration: 0.05s;
+    animation-fill-mode: forwards;
+}
+canvas {
+    margin-left:0;
+    padding:0;
+    border:0;
+    width:calc(100% - var(--sidebar-width));
+    height:100%;
+    display:block;
+    float:right;
+}
